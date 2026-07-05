@@ -1,2 +1,52 @@
-# FeedBack-Bases-Discount-n8n
-Based feedbacks bad, good and normal providing the discount
+
+# Feedback-Based Smart Discount System (n8n Workflow)
+
+## Use Case
+When a user submits a feedback form, this workflow automatically decides whether they should receive a discount — no manual review needed.
+
+## Workflow: "Feed Back Discount"
+
+**Trigger:** On form submission
+
+**Flow:**
+1. **On form submission** — captures the user's feedback response.
+2. **If** — checks the feedback value.
+   - **true** → routes to **Discount Yes**
+   - **false** → routes to **Discount No**
+3. **Discount Yes / Discount No** — sets the discount decision (manual node) based on the branch taken.
+4. **Append row in sheet** — logs the form response and discount decision into Google Sheets.
+5. **Send a message** — sends the discount outcome to the user via Gmail.
+
+## How It Works
+1. Form submission triggers the workflow.
+2. An IF node checks the feedback.
+3. If feedback = Positive → Discount = Yes.
+4. If not → Discount = No.
+5. All responses are automatically logged into Google Sheets.
+6. An email is sent to the user with the discount outcome.
+
+## Benefits
+- No manual review
+- Instant decision-making
+- Clean tracking (all responses logged in Sheets)
+- Perfect for e-commerce & loyalty campaigns
+
+## Nodes Used
+| Node | Type | Purpose |
+|---|---|---|
+| On form submission | Form Trigger | Starts the workflow when feedback is submitted |
+| If | Conditional | Evaluates feedback sentiment |
+| Discount Yes | Set | Marks discount as approved |
+| Discount No | Set | Marks discount as not approved |
+| Append row in sheet | Google Sheets | Logs the response and decision |
+| Send a message | Gmail | Notifies the user of the outcome |
+
+## What This Shows
+Automation isn't just about connecting tools — it's about smarter decisions, faster workflows, better documentation, and improved customer experience. From AI-driven developer workflows to marketing automation, the possibilities with n8n are massive.
+
+## Acknowledgment
+Special thanks to Nitish Singh Sir for the valuable guidance and support throughout building these workflows.
+
+---
+*The goal: let systems handle repetition so we can focus on strategy and creativity.*
+
