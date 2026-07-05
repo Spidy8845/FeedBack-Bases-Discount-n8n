@@ -3,7 +3,7 @@
 
 ## Use Case
 When a user submits a feedback form, this workflow automatically decides whether they should receive a discount — no manual review needed.
-
+![image alt](https://github.com/Spidy8845/FeedBack-Bases-Discount-n8n/blob/main/Screenshot%202026-07-05%20220637.png?raw=true)
 ## Workflow: "Feed Back Discount"
 
 **Trigger:** On form submission
